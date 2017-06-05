@@ -1,4 +1,5 @@
 <h4>County Office </h4>
+<%#= request.ip %>
 <% @countytypes.each do |value| %>
   <%= link_to value.type, controller: "countytypes", action: "get_categories_by_reloading",:id => value.id%></br>
   <%#= link_to value.type,'#',:id => value.id,:class => "county-link" %></br>

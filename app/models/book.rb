@@ -1,8 +1,5 @@
 class Book < ActiveRecord::Base
 	require 'csv'
-	def self.search(term)
-      where('LOWER(title) LIKE :term OR LOWER(author) LIKE :term')
-    end
 
    #Download a csv file
     def self.to_csv
@@ -15,7 +12,7 @@ class Book < ActiveRecord::Base
     	end
     end
 
- # To Import value from CSV to databasess
+ # To Import value from CSV to database
     def self.import(file)
     	CSV.foreach(file.path, headers: true) do |row|
             Book.find_or_create_by(title: row['Title'],author: row['Author'],price: row['Price'],published_at: row['Published At'],created_at: row['Created At'])
