@@ -1,3 +1,3 @@
 class County < ActiveRecord::Base
-	belong_to :state
+	belongs_to :state
 end

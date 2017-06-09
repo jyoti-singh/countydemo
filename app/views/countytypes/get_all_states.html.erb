@@ -1,0 +1,3 @@
+<% @states.each do |value| %>
+     <%= link_to value.name,:id => value.id,controller: "countytypes", action: "get_all_counties"%></br>
+   <% end %>

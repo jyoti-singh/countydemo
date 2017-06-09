@@ -1,3 +1,3 @@
 class Category < ActiveRecord::Base
-	belongs_to :countytype
+	belongs_to :countytype	
 end

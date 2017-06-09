@@ -3,6 +3,7 @@ Rails.application.routes.draw do
   devise_for :admin_users, ActiveAdmin::Devise.config
   ActiveAdmin.routes(self)
   resources :categories
+  resources :users
 
   resources :countytypes do
     collection do
@@ -11,6 +12,8 @@ Rails.application.routes.draw do
   end
 
   get 'get_categories_by_reloading' => 'countytypes#get_categories_by_reloading'
+  get 'get_all_states' => 'countytypes#get_all_states'
+  get 'get_all_counties' => 'countytypes#get_all_counties'
 
   resources :books do 
     collection do

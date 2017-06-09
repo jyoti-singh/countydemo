@@ -15,7 +15,13 @@ class CountytypesController < ApplicationController
     @categories = Countytype.find(params[:id]).categories
   end
 
+  def get_all_states
+    @states = State.all
+  end
 
+   def get_all_counties
+    @counties = County.where(:state_id => params[:id])
+   end
   # GET /countytypes/1
   # GET /countytypes/1.json
   def show

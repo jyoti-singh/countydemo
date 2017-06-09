@@ -39,6 +39,9 @@ gem 'geocoder'
 gem 'geokit-rails'
 gem "twitter-bootstrap-rails"
 gem 'bootstrap-sass', '3.0.2.1'
+gem 'ckeditor', github: 'galetahub/ckeditor'
+gem 'paperclip'
+
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
